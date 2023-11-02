@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Campeonato Brasileiro</title>
+</head>
+<body>
+<h1>Lista de Times</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Time</th>
+        <th>Artilheiro</th>
+        <th>Pontos</th>
+        <th>Gols</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="Times : ${Times}">
+        <td th:text="${Times.nome}"></td>
+        <td th:text="${Times.artilheiro}"></td>
+        <td th:text="${Times.pontos}"></td>
+        <td th:text="${Times.gols}"></td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+</body>
+</html>
